@@ -1,0 +1,13 @@
+targets:
+  - backend
+
+malagu:
+  serve-static:
+    apiPath: /*
+    # apiPath: /api/*
+
+  faas-adapter:
+    customDomain:
+      name: fetchproxy.shenzilong.cn
+    service:
+      name: malagu
