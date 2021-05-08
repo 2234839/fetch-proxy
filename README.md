@@ -4,7 +4,7 @@
 
 ## 使用方式
 
-**自用服务，如有同样的需求请自行另建服务，请勿白嫖下面的函数计算。(或者赞助后使用)**
+自用服务，如有同样的需求***请自行另建服务***，请勿白嫖下面的函数计算。(或者[赞助后使用](https://afdian.net/@llej0))
 
 ```js
 fetch(`${"https" || "http"}://fetchproxy.shenzilong.cn/`, {
@@ -13,11 +13,21 @@ fetch(`${"https" || "http"}://fetchproxy.shenzilong.cn/`, {
   body: JSON.stringify({
     url: "https://zhihu.com",
   }),
+  headers: {
+    "Content-Type": "application/json",
+  },
 })
   .then((response) => response.text())
   .then((result) => console.log(result))
   .catch((error) => console.log("error", error));
+// CORS
+fetch(`https://zhihu.com`)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
 ```
+
+github 网站设置了 CSP 可以去[我的网站尝试上面的脚本](https://shenzilong.cn)
 
 ## 开发说明
 
