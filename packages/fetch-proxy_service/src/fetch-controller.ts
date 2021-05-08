@@ -9,9 +9,9 @@ export class fetchController {
     return "崮生 -> https://shenzilong.cn ";
   }
   @Post()
-  async fetch(@Body() p: { url: RequestInfo; init?: RequestInit }) {
-    const { url, init } = p;
-    const r = await nodeFetch(url, init);
+  async fetch(@Body() p: { input: RequestInfo; init?: RequestInit }) {
+    const { input, init } = p;
+    const r = await nodeFetch(input, init);
 
     const { status, statusText } = r;
     const headers = r.headers.raw();

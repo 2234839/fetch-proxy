@@ -18,9 +18,9 @@
 ```js
 fetch(`${"https" || "http"}://fetchproxy.shenzilong.cn`, {
   method: "POST",
-  /** 此处参数参见 node-fetch { url: RequestInfo; init?: RequestInit } */
+  /** 此处参数参见 node-fetch { input: RequestInfo; init?: RequestInit } */
   body: JSON.stringify({
-    url: "https://zhihu.com",
+    input: "https://zhihu.com",
   }),
   headers: {
     "Content-Type": "application/json",
