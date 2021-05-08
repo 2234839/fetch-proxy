@@ -3,8 +3,7 @@
   "keywords": [
     "malagu-component"
   ],
-  "version": "0.0.0",
-  "license": "MIT",
+  "version": "1.0.0",
   "files": [
     "lib",
     "src"
@@ -28,5 +27,15 @@
     "deploy:test": "malagu deploy -m test",
     "deploy:pre": "malagu deploy -m pre",
     "deploy:prod": "malagu deploy -m prod"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/2234839/fetch-proxy.git"
+  },
+  "author": "崮生",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2234839/fetch-proxy/issues"
+  },
+  "homepage": "https://github.com/2234839/fetch-proxy#readme"
 }

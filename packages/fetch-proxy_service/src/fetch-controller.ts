@@ -6,12 +6,15 @@ import type { RequestInfo, RequestInit } from "node-fetch";
 export class fetchController {
   @Get()
   a() {
-    return 1;
+    return "崮生 -> https://shenzilong.cn ";
   }
   @Post()
   async fetch(@Body() p: { url: RequestInfo; init?: RequestInit }) {
     const { url, init } = p;
     const r = await nodeFetch(url, init);
-    return r.text()
+
+    const { status, statusText } = r;
+    const headers = r.headers.raw();
+    return { headers, status, statusText, BodyInit: await r.text() };
   }
 }
