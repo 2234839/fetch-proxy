@@ -11,3 +11,6 @@ malagu:
       name: fetchproxy.shenzilong.cn
     service:
       name: malagu
+    function:
+      memorySize: 192
+

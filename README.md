@@ -7,7 +7,7 @@
 **自用服务，如有同样的需求请自行另建服务，请勿白嫖下面的函数计算。(或者赞助后使用)**
 
 ```js
-fetch("http://fetchproxy.shenzilong.cn/", {
+fetch(`${"https" || "http"}://fetchproxy.shenzilong.cn/`, {
   method: "POST",
   /** 此处参数参见 node-fetch { url: RequestInfo; init?: RequestInit } */
   body: JSON.stringify({
