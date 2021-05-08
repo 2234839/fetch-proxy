@@ -11,11 +11,31 @@
     - else (处于油猴脚本的执行环境下): 使用 GM.xmlHttpRequest
     - else : 通过原生 fetch 调用 fetch-proxy service
 
+## fetch-proxy lib 的使用方式
+
+github 网站设置了 CSP 可以去[我的网站尝试下面的脚本](https://shenzilong.cn)
+
+```js
+import { fetch_proxy } from "fetch-proxy_lib";
+
+fetch_proxy(`https://zhihu.com`)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
+```
+
+如果不在油猴环境下使用的话还请自建服务,然后配置 :
+
+```js
+fetch_proxy.config.fetch_proxy_service = "https://自建服务地址"
+```
+
 ## fetch-proxy service 的使用方式
 
 自用服务，如有同样的需求***请自行另建服务***，请勿白嫖下面的函数计算。(或者[赞助后使用](https://afdian.net/@llej0))
 
 ```js
+// fetchproxy.shenzilong.cn 处的云函数位于阿里云，对于被 GFW 的网站访问一般都会超时
 fetch(`${"https" || "http"}://fetchproxy.shenzilong.cn`, {
   method: "POST",
   /** 此处参数参见 node-fetch { input: RequestInfo; init?: RequestInit } */
@@ -35,8 +55,6 @@ fetch(`https://zhihu.com`)
   .then((result) => console.log(result))
   .catch((error) => console.log("error", error));
 ```
-
-github 网站设置了 CSP 可以去[我的网站尝试上面的脚本](https://shenzilong.cn)
 
 ## 开发说明
 
