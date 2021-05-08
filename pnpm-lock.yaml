@@ -2,7 +2,7 @@ lockfileVersion: 5.3
 
 importers:
 
-  .:
+  packages/fetch-proxy_service:
     specifiers:
       '@malagu/cli': latest
       '@malagu/cli-service': latest
@@ -20,21 +20,6 @@ importers:
       '@malagu/cli': 1.21.0
       '@malagu/cli-service': 1.21.0
       '@types/node-fetch': 2.5.10
-
-  packages/app:
-    specifiers:
-      '@malagu/cli': latest
-      '@malagu/cli-service': latest
-      '@malagu/core': ^1.21.0
-      '@malagu/fc-adapter': latest
-      '@malagu/mvc': latest
-    dependencies:
-      '@malagu/core': 1.21.0
-      '@malagu/fc-adapter': 1.21.0
-      '@malagu/mvc': 1.21.0
-    devDependencies:
-      '@malagu/cli': 1.21.0
-      '@malagu/cli-service': 1.21.0
 
 packages:
 
